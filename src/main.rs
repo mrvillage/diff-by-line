@@ -9,8 +9,8 @@ fn main() {
     for (i, (line1, line2)) in file1.lines().zip(file2.lines()).enumerate() {
         if line1.trim() != line2.trim() {
             println!("Line {}", i + 1);
-            println!("{}: {}", args[1], line1);
-            println!("{}: {}", args[2], line2);
+            println!("{}", line1);
+            println!("{}", line2);
             println!();
         }
     }
