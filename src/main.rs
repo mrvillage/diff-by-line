@@ -7,7 +7,7 @@ fn main() {
     let file1 = std::fs::read_to_string(&args[1]).unwrap();
     let file2 = std::fs::read_to_string(&args[2]).unwrap();
     for (i, (line1, line2)) in file1.lines().zip(file2.lines()).enumerate() {
-        if line1.trim() != line2.trim() {
+        if line1 != line2 {
             println!("Line {}", i + 1);
             println!("{}", line1);
             println!("{}", line2);
